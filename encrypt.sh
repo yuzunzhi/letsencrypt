@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##从头签发Let's Encrypt免费SSL证书
-DOMAINS="DNS:encrypt.yuzunzhi.com"
+DOMAINS="DNS:xx.xx.com,DNS:yy.yy.com"
 CHALLENGE_DIR="/var/www/challenges/"
 
 cd $(dirname $0)
