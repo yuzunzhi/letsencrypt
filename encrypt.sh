@@ -20,7 +20,7 @@ fi
 
 ##生成openssl配置文件，添加需要签名的domain
 OPENSSL_CONF="/etc/ssl/openssl.cnf"
-if [! -f ${OPENSSL_CONF} ];then
+if [ ! -f ${OPENSSL_CONF} ];then
     OPENSSL_CONF="/etc/pki/tls/openssl.cnf"
     if [ ! -f ${OPENSSL_CONF} ];then
         echo "openssl.cnf not found"
