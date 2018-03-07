@@ -9,14 +9,14 @@ DNS:xxxx.xxxx.com,DNS:yyyy.yyyy.cn,DNS:zzzz.zzzz.io
 
 3、本地Nginx准备对应domain的challenge目录
 
-server {
-    listen 80 default_server;
-    server_name yoursite.com;
+    server {
+        listen 80 default_server;
+        server_name yoursite.com;
     
-    location /.well-known/acme-challenge/ {
-        alias /var/www/challenges/;  # your challenges dir
-        try_files $uri =404;
+        location /.well-known/acme-challenge/ {
+            alias /var/www/challenges/;  # your challenges dir
+            try_files $uri =404;
+        }
     }
-}
 
 4、更改脚本内DOMAINS和CHALLENGE_DIR变量，执行脚本
